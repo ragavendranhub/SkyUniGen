@@ -1,0 +1,148 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row > div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Inputs, Dropdowns, Labels, and Buttons */
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.dropdown,
+.input-field {
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.generate-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Results & Tooltips */
+.result {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background-color: #f9f9f9;
+}
+
+.result:hover {
+  background-color: #e6f7ff;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%; /* Position above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.result:hover .tooltip {
+  display: block;
+}
+
+/* Optional: For any additional card-like styles */
+.result-item {
+  padding: 8px;
+  margin: 4px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+select {
+  padding: 5px 10px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center; /* Vertically aligns label and input */
+  margin-bottom: 10px; /* Adds spacing between form groups */
+}
+
+.form-group label {
+  width: 150px; /* Set a fixed width for all labels */
+  text-align: right; /* Align text to the far right */
+  padding-right: 10px; /* Add spacing between the label and input */
+  box-sizing: border-box; /* Ensure padding doesn't expand the label */
+  margin: 0; /* Reset default margins */
+  white-space: nowrap; /* Prevent text wrapping into two lines */
+}
+
+.form-group .input-field,
+.form-group .dropdown {
+  width: 200px; /* Set a fixed width for all input fields and dropdowns */
+  padding: 5px; /* Add consistent padding for better spacing */
+  margin: 0; /* Reset default margins */
+  box-sizing: border-box; /* Ensure padding doesn't expand the element */
+}
+
+.row.center {
+  text-align: center;
+}
