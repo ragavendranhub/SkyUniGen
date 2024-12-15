@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyUniGen</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- Link to external CSS file -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+<div class="container">
+  <!-- Top Section: Radio Buttons -->
+  <div class="row">
+    <label><input type="radio" name="option" id="random" value="Random" checked> Random</label>
+    <label><input type="radio" name="option" id="uuid" value="UUID"> UUID</label>
+    <label><input type="radio" name="option" id="sky" value="SkyValues"> Sky Values</label>
+  </div>
+
+  <div>
+    <br><br>
+  </div>
+
+  <!-- Dynamic Middle Section -->
+  <div id="dynamic-options" class="row" align="center">
+    <!-- Random Options -->
+    <div id="random-options" style="display: block;">
+      <label><input type="checkbox" id="include-alphabets"> Alphabets</label>
+      <label><input type="checkbox" id="include-numeric"> Numeric</label>
+      <label><input type="checkbox" id="include-special"> Special Characters</label>
+
+      <div>
+        <br><br>
+      </div>
+
+      <div class="form-group">
+        <label for="random-length">Length:</label>
+        <input type="number" id="random-length" class="input-field" placeholder="e.g., 10">
+      </div>
+    </div>
+
+    <!-- UUID Options -->
+    <div id="uuid-options" style="display: none;">
+      <p class="center">UUID will be generated in a universal format.</p>
+    </div>
+
+    <!-- Sky Values Options -->
+    <div id="sky-values-options" style="display: none;">
+      <div class="form-group">
+        <label for="sky-dropdown">Sky Value:</label>
+        <select id="sky-dropdown" class="dropdown">
+          <option value="DEVICE_APPLE">DEVICE_APPLE</option>
+          <option value="EID">EID</option>
+          <option value="ICCID">ICCID</option>
+          <option value="IMEI">IMEI</option>
+          <option value="MAC12">MAC12</option>
+          <option value="MAC12OR16">MAC12OR16</option>
+          <option value="MAC16">MAC16</option>
+          <option value="NDS">NDS</option>
+          <option value="SAGEM10">SAGEM10</option>
+          <option value="SKY14">SKY14</option>
+          <option value="SKY17" selected>SKY17</option>
+          <option value="SKY9">SKY9</option>
+        </select>
+      </div>
+      <div>
+        <br><br>
+      </div>
+      <div class="form-group">
+        <label for="sky-prefix" hidden="">Prefix:</label>
+        <input type="text" id="sky-prefix" class="input-field" placeholder="Enter prefix" hidden="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Section: Count -->
+  <div class="row center">
+    <div class="form-group">
+      <label for="count">Generate Count:</label>
+      <input type="number" id="count" class="input-field" placeholder="e.g., 5">
+    </div>
+  </div>
+
+  <!-- Generate Button -->
+  <div class="row center">
+    <button id="generate-btn" class="generate-btn">Generate</button>
+  </div>
+
+  <!-- Results Section -->
+  <div class="results" id="results"></div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+
+</html>
